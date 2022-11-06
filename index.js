@@ -1,4 +1,10 @@
 // Mock take home challenge Wordle for FAC26
+const state = {
+    grid: Array(6).fill().map(() => Array(5).fill('')),
+    currentRow: 0,
+    currentColumn: 0,
+}
+
 function drawBox(container, row, column, letter = '') {
     const box = document.createElement('div');
     box.className = 'box';
@@ -23,8 +29,10 @@ function drawGrid(container) {
 
     container.appendChild(grid);
 }
-
+const game = document.querySelector("#game");
 function startUp() {
-    const game = document.querySelector('#game');
+    
     drawGrid(game);
 }
+
+startUp();
