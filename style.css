@@ -37,13 +37,14 @@ body {
 }
 
 .box.empty {
-    
+    background: var(--empty);
+
 }
 
 .box.wrong {
-
+    background: var(--wrong);
 }
 
 .box.right {
-
+    background: var(--right);
 }
