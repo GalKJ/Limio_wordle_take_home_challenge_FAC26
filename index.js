@@ -6,5 +6,6 @@ function drawBox(container, row, column, letter = '') {
     box.textContent = letter;
 
     container.appendChild(box);
-
+    
+    return box;
 }
