@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+}
+
+
 #game {
     display: grid;
     place-items: center;
