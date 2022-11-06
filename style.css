@@ -1,3 +1,10 @@
+:root {
+    --default: #121213;
+    --empty: #3a3a3c;
+    --wrong: hotpink;
+    --right: rebeccapurple;
+}
+
 body {
     background-color: black;
 }
