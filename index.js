@@ -133,3 +133,9 @@ function startUp() {
 startUp();
 
 // console.log(state.grid[state.currentRow]);
+
+const checkbox = document.querySelector('#contrast');
+
+if (checkbox.checked) {
+    console.log('rabbitz');
+}
