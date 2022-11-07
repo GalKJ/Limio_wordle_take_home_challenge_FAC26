@@ -50,6 +50,7 @@ function registerKeyboardEvents() {
                 if (isWordValid(word)) {
                     revealWord(word);
                     state.currentRow++;
+                    state.currentColumn = 0;
                 }
             }
         }
