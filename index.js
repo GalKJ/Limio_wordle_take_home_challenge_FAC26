@@ -5,6 +5,17 @@ const state = {
     currentColumn: 0,
 }       
 
+function updateGrid() {
+    for (let i = 0; i < state.grid.length; i++) {
+        for (let j = 0; j < state.grid[i].length; j++) {
+            const box = document.querySelector(`#box${i}${j}`);
+            box.textContent = state.grid[i][j];
+            
+        }
+        
+    }
+}
+
 function drawBox(container, row, column, letter = '') {
     const box = document.createElement('div');
     box.className = 'box';
@@ -30,13 +41,17 @@ function drawGrid(container) {
     container.appendChild(grid);
 }
 
-const game = document.querySelector("#game");
+
 
 function startUp() {
-    
+    // is this the bug below?
+    const game = document.querySelector("#game");
     drawGrid(game);
-}
 
+
+state.grid = Array(6).fill().map(() => Array(5).fill('A'));
+updateGrid();
+}
 startUp();
 
-// console.log(Array(6).fill().map(() => Array(5).fill('')));
+// console.log(state.grid[0].length);
