@@ -67,6 +67,10 @@ function registerKeyboardEvents() {
     });
 }
 
+function getCurrentWord() {
+    return state.grid[state.currentRow].reduce((acc, current) => {acc + current});
+}
+
 function startUp() {
     // is this the bug below?
     const game = document.querySelector("#game");
