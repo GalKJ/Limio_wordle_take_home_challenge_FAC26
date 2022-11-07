@@ -113,6 +113,12 @@ function addLetter(letter) {
     state.currentColumn++;
 }
 
+function removeLetter() {
+    if (state.currentColumn === 0) return;
+    state.grid[state.currentRow][state.currentColumn] = '';
+    state.currentColumn--;
+}
+
 function startUp() {
     // is this the bug below?
     const game = document.querySelector("#game");
