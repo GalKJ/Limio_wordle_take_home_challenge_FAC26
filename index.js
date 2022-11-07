@@ -1,5 +1,5 @@
 // Mock take home challenge Wordle for FAC26
-const dictionary = ['tears', 'water', 'river', 'juice'];
+const dictionary = ['tears', 'water', 'river', 'juice', 'tools', 'freak', 'cloth'];
 
 const state = {
     secret: dictionary[Math.floor(Math.random() * dictionary.length)],
@@ -55,7 +55,7 @@ function registerKeyboardEvents() {
                     state.currentRow++;
                     state.currentColumn = 0;
                 } else {
-                    alert('This is not a valid word User');
+                    alert('This is not a valid word User.');
                 }
             }
         }
@@ -63,7 +63,7 @@ function registerKeyboardEvents() {
             removeLetter();
         }
         if (isLetter(key)) {
-            addLetter();
+            addLetter(key);
         }
 
         updateGrid();
@@ -71,7 +71,7 @@ function registerKeyboardEvents() {
 }
 
 function getCurrentWord() {
-    return state.grid[state.currentRow].reduce((acc, current) => {acc + current});
+    return state.grid[state.currentRow].reduce((acc, current) => acc + current);
 }
 
 function isWordValid(word) {
@@ -80,11 +80,12 @@ function isWordValid(word) {
 
 function revealWord(guess) {
     const row = state.currentRow;
+
     for (let i = 0; i < 5; i++) {
         const box = document.querySelector(`#box${row}${i}`);
         const letter = box.textContent;
 
-        if (letter = state.secret[i]) {
+        if (letter === state.secret[i]) {
             box.classList.add('right');
         } else if (state.secret.includes(letter)) {
             box.classList.add('wrong');
@@ -115,7 +116,7 @@ function addLetter(letter) {
 
 function removeLetter() {
     if (state.currentColumn === 0) return;
-    state.grid[state.currentRow][state.currentColumn] = '';
+    state.grid[state.currentRow][state.currentColumn - 1] = '';
     state.currentColumn--;
 }
 
@@ -125,6 +126,8 @@ function startUp() {
     drawGrid(game);
 
     registerKeyboardEvents();
+
+    console.log(state.secret); 
 }
 
 startUp();
