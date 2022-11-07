@@ -78,7 +78,30 @@ function isWordValid(word) {
     return dictionary.includes(word);
 }
 
+function revealWord(guess) {
+    const row = state.currentRow;
+    for (let i = 0; i < 5; i++) {
+        const box = document.querySelector(`#box${row}${i}`);
+        const letter = box.textContent;
 
+        if (letter = state.secret[i]) {
+            box.classList.add('right');
+        } else if (state.secret.includes(letter)) {
+            box.classList.add('wrong');
+        } else {
+            box.classList.add('empty');
+        }
+    }
+    
+    const isWinner = state.secret === guess;
+    const isGameOver = state.currentRow === 5;
+
+    if (isWinner) {
+        alert('Congratulations User :) You win!');
+    } else if (isGameOver) {
+        alert(`Better luck next time User:( The correct word was ${state.secret}.`)
+    }
+}
 
 function startUp() {
     // is this the bug below?
