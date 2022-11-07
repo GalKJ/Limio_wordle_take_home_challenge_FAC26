@@ -63,3 +63,8 @@ body {
 .box.right {
     background: var(--right);
 }
+
+.box.contrast-empty {
+    background: aqua;
+
+}
