@@ -1,4 +1,6 @@
 // Mock take home challenge Wordle for FAC26
+const dictionary = ['tears', 'water', 'river', 'juice'];
+
 const state = {
     grid: Array(6).fill().map(() => Array(5).fill('')),
     currentRow: 0,
