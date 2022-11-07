@@ -9,7 +9,20 @@ body {
     background-color: var(--default);
 }
 
+/* Contrast */
+#options {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: hotpink;
+}
+#contrast-label {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: hotpink;
+}
 
+
+/* Game */
 #game {
     display: grid;
     place-items: center;
