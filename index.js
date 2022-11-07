@@ -40,15 +40,38 @@ function drawGrid(container) {
 
     container.appendChild(grid);
 }
+// using addEventListener rather than onkeydown
+function registerKeyboardEvents() {
+    document.body.addEventListener("keydown", (e) => {
+        const key = e.key;
+        if (key === 'Enter') {
+            if (state.currentColumn === 5) {
+                const word = getCurrentWord();
+                if (isWordValid(word)) {
+                    revealWord(word);
+                    state.currentRow++;
+                }
+            }
+        }
+        if (key === 'Backspace') {
+            
+        }
+        if (isLetter(key)) {
+            
+        }
 
-
+        updateGrid();
+    });
+}
 
 function startUp() {
     // is this the bug below?
     const game = document.querySelector("#game");
     drawGrid(game);
+
+    registerKeyboardEvents();
 }
 
 startUp();
 
-console.log(state.grid[state.currentRow]);
+// console.log(state.grid[state.currentRow]);
