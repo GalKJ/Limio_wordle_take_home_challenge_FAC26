@@ -47,11 +47,8 @@ function startUp() {
     // is this the bug below?
     const game = document.querySelector("#game");
     drawGrid(game);
-
-
-state.grid = Array(6).fill().map(() => Array(5).fill('A'));
-updateGrid();
 }
+
 startUp();
 
-// console.log(state.grid[0].length);
+console.log(state.grid[state.currentRow]);
