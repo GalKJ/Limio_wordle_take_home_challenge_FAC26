@@ -3,7 +3,7 @@ const state = {
     grid: Array(6).fill().map(() => Array(5).fill('')),
     currentRow: 0,
     currentColumn: 0,
-}
+}       
 
 function drawBox(container, row, column, letter = '') {
     const box = document.createElement('div');
@@ -29,10 +29,14 @@ function drawGrid(container) {
 
     container.appendChild(grid);
 }
+
 const game = document.querySelector("#game");
+
 function startUp() {
     
     drawGrid(game);
 }
 
 startUp();
+
+// console.log(Array(6).fill().map(() => Array(5).fill('')));
