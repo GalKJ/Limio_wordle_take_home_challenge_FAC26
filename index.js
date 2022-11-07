@@ -107,6 +107,12 @@ function isLetter(key) {
     return key.length === 1 && key.match(/[a-z]/i);
 }
 
+function addLetter(letter) {
+    if (state.currentColumn === 5) return;
+    state.grid[state.currentRow][state.currentColumn] = letter;
+    state.currentColumn++;
+}
+
 function startUp() {
     // is this the bug below?
     const game = document.querySelector("#game");
