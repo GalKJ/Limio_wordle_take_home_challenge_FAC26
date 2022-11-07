@@ -51,14 +51,16 @@ function registerKeyboardEvents() {
                     revealWord(word);
                     state.currentRow++;
                     state.currentColumn = 0;
+                } else {
+                    alert('This is not a valid word User');
                 }
             }
         }
         if (key === 'Backspace') {
-            
+            removeLetter();
         }
         if (isLetter(key)) {
-            
+            addLetter();
         }
 
         updateGrid();
