@@ -134,6 +134,6 @@ startUp();
 
 // console.log(state.grid[state.currentRow]);
 
-// High contrast user story 
+// High contrast feature 
 const contrastButton = document.querySelector('#contrast');
 

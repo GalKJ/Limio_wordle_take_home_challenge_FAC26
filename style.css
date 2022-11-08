@@ -68,3 +68,22 @@ body {
     background: aqua;
 
 }
+
+/* High contrast feature */
+
+#contrast {
+    background: linear-gradient(33deg, rebeccapurple, hotpink);
+        transition: all 1s ease;
+        padding: 0.2rem;
+        border: 1px solid transparent;
+        text-decoration: none;
+        font-size: medium;
+}
+
+#contrast:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
