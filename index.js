@@ -80,11 +80,13 @@ function isWordValid(word) {
 
 function revealWord(guess) {
     const row = state.currentRow;
+    const contrastButton = document.querySelector('#contrast');
 
     for (let i = 0; i < 5; i++) {
         const box = document.querySelector(`#box${row}${i}`);
         const letter = box.textContent;
 
+        if (contrastToggle === false) {
         if (letter === state.secret[i]) {
             box.classList.add('right');
         } else if (state.secret.includes(letter)) {
@@ -92,6 +94,16 @@ function revealWord(guess) {
         } else {
             box.classList.add('empty');
         }
+    } else if (contrastToggle === true) {
+        if (letter === state.secret[i]) {
+            box.classList.add('right');
+        } else if (state.secret.includes(letter)) {
+            box.classList.add('wrong');
+        } else {
+            box.classList.remove('empty');
+            box.classList.add('contrast-empty');
+        }
+    }
     }
     
     const isWinner = state.secret === guess;
@@ -136,4 +148,14 @@ startUp();
 
 // High contrast feature 
 const contrastButton = document.querySelector('#contrast');
+let contrastToggle = false;
+contrastButton.addEventListener("click", () => {
 
+    if (contrastToggle === false) {
+        contrastToggle = true;
+        console.log(contrastToggle);
+    } else if (contrastToggle === true) {
+        contrastToggle = false;
+        console.log(contrastToggle);
+    } 
+})
