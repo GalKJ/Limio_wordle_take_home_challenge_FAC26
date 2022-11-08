@@ -56,18 +56,28 @@ body {
 
 }
 
+.box.contrast-empty {
+    background: aqua;
+
+}
+
 .box.wrong {
     background: var(--wrong);
+}
+
+.box.contrast-wrong {
+    background: firebrick;
 }
 
 .box.right {
     background: var(--right);
 }
 
-.box.contrast-empty {
-    background: aqua;
-
+.box.contrast-right {
+    background: forestgreen;
 }
+
+
 
 /* High contrast feature */
 
