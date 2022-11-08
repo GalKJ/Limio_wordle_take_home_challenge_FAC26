@@ -96,9 +96,11 @@ function revealWord(guess) {
         }
     } else if (contrastToggle === true) {
         if (letter === state.secret[i]) {
-            box.classList.add('right');
+            box.classList.remove('right');
+            box.classList.add('contrast-right');
         } else if (state.secret.includes(letter)) {
-            box.classList.add('wrong');
+            box.classList.remove('wrong');
+            box.classList.add('contrast-wrong');
         } else {
             box.classList.remove('empty');
             box.classList.add('contrast-empty');
