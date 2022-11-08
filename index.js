@@ -134,8 +134,6 @@ startUp();
 
 // console.log(state.grid[state.currentRow]);
 
-const checkbox = document.querySelector('#contrast');
+// High contrast user story 
+const contrastButton = document.querySelector('#contrast');
 
-if (checkbox.checked) {
-    console.log('rabbitz');
-}
