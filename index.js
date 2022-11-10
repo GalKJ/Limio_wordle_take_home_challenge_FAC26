@@ -70,53 +70,53 @@ function registerKeyboardEvents() {
     });
 }
 
-function getCurrentWord() {
-    return state.grid[state.currentRow].reduce((acc, current) => acc + current);
-}
+// function getCurrentWord() {
+//     return state.grid[state.currentRow].reduce((acc, current) => acc + current);
+// }
 
-function isWordValid(word) {
-    return dictionary.includes(word);
-}
+// function isWordValid(word) {
+//     return dictionary.includes(word);
+// }
 
-function revealWord(guess) {
-    const row = state.currentRow;
-    const contrastButton = document.querySelector('#contrast');
+// function revealWord(guess) {
+//     const row = state.currentRow;
+//     const contrastButton = document.querySelector('#contrast');
 
-    for (let i = 0; i < 5; i++) {
-        const box = document.querySelector(`#box${row}${i}`);
-        const letter = box.textContent;
+//     for (let i = 0; i < 5; i++) {
+//         const box = document.querySelector(`#box${row}${i}`);
+//         const letter = box.textContent;
 
-        if (contrastToggle === false) {
-        if (letter === state.secret[i]) {
-            box.classList.add('right');
-        } else if (state.secret.includes(letter)) {
-            box.classList.add('wrong');
-        } else {
-            box.classList.add('empty');
-        }
-    } else if (contrastToggle === true) {
-        if (letter === state.secret[i]) {
-            box.classList.remove('right');
-            box.classList.add('contrast-right');
-        } else if (state.secret.includes(letter)) {
-            box.classList.remove('wrong');
-            box.classList.add('contrast-wrong');
-        } else {
-            box.classList.remove('empty');
-            box.classList.add('contrast-empty');
-        }
-    }
-    }
+//         if (contrastToggle === false) {
+//         if (letter === state.secret[i]) {
+//             box.classList.add('right');
+//         } else if (state.secret.includes(letter)) {
+//             box.classList.add('wrong');
+//         } else {
+//             box.classList.add('empty');
+//         }
+//     } else if (contrastToggle === true) {
+//         if (letter === state.secret[i]) {
+//             box.classList.remove('right');
+//             box.classList.add('contrast-right');
+//         } else if (state.secret.includes(letter)) {
+//             box.classList.remove('wrong');
+//             box.classList.add('contrast-wrong');
+//         } else {
+//             box.classList.remove('empty');
+//             box.classList.add('contrast-empty');
+//         }
+//     }
+//     }
     
-    const isWinner = state.secret === guess;
-    const isGameOver = state.currentRow === 5;
+//     const isWinner = state.secret === guess;
+//     const isGameOver = state.currentRow === 5;
 
-    if (isWinner) {
-        alert('Congratulations User :) You win!');
-    } else if (isGameOver) {
-        alert(`Better luck next time User:( The correct word was ${state.secret}.`)
-    }
-}
+//     if (isWinner) {
+//         alert('Congratulations User :) You win!');
+//     } else if (isGameOver) {
+//         alert(`Better luck next time User:( The correct word was ${state.secret}.`)
+//     }
+// }
 
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-z]/i);
@@ -149,15 +149,15 @@ startUp();
 // console.log(state.grid[state.currentRow]);
 
 // High contrast feature 
-const contrastButton = document.querySelector('#contrast');
-let contrastToggle = false;
-contrastButton.addEventListener("click", () => {
+// const contrastButton = document.querySelector('#contrast');
+// let contrastToggle = false;
+// contrastButton.addEventListener("click", () => {
 
-    if (contrastToggle === false) {
-        contrastToggle = true;
-        console.log(contrastToggle);
-    } else if (contrastToggle === true) {
-        contrastToggle = false;
-        console.log(contrastToggle);
-    } 
-})
+//     if (contrastToggle === false) {
+//         contrastToggle = true;
+//         console.log(contrastToggle);
+//     } else if (contrastToggle === true) {
+//         contrastToggle = false;
+//         console.log(contrastToggle);
+//     } 
+// })
