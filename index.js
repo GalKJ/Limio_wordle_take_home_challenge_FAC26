@@ -90,13 +90,13 @@ function isWordValid(word) {
 
 function revealWord(guess) {
     const row = state.currentRow;
-    const contrastButton = document.querySelector('#contrast');
+    // const contrastButton = document.querySelector('#contrast');
 
     for (let i = 0; i < 5; i++) {
         const box = document.querySelector(`#box${row}${i}`);
         const letter = box.textContent;
 
-        if (contrastToggle === false) {
+        // if (contrastToggle === false) {
         if (letter === state.secret[i]) {
             box.classList.add('right');
         } else if (state.secret.includes(letter)) {
@@ -104,18 +104,18 @@ function revealWord(guess) {
         } else {
             box.classList.add('empty');
         }
-    } else if (contrastToggle === true) {
-        if (letter === state.secret[i]) {
-            box.classList.remove('right');
-            box.classList.add('contrast-right');
-        } else if (state.secret.includes(letter)) {
-            box.classList.remove('wrong');
-            box.classList.add('contrast-wrong');
-        } else {
-            box.classList.remove('empty');
-            box.classList.add('contrast-empty');
-        }
-    }
+    // } else if (contrastToggle === true) {
+    //     if (letter === state.secret[i]) {
+    //         box.classList.remove('right');
+    //         box.classList.add('contrast-right');
+    //     } else if (state.secret.includes(letter)) {
+    //         box.classList.remove('wrong');
+    //         box.classList.add('contrast-wrong');
+    //     } else {
+    //         box.classList.remove('empty');
+    //         box.classList.add('contrast-empty');
+    //     }
+    // }
     }
     
     const isWinner = state.secret === guess;
@@ -160,16 +160,40 @@ startUp();
 
 // High contrast feature 
 const contrastButton = document.querySelector('#contrast');
-let contrastToggle = false;
+// let contrastToggle = false;
 contrastButton.addEventListener("click", (e) => {
 
-    if (contrastToggle === false) {
-        contrastToggle = true;
-        e.target.blur();
-        console.log(contrastToggle);
-    } else if (contrastToggle === true) {
-        contrastToggle = false;
-        e.target.blur();
-        console.log(contrastToggle);
-    } 
+    const boxes = document.querySelector(".grid").childNodes;
+    console.log(boxes[0].className);
+
+    boxes.forEach(box => {
+        // console.log(box.classList);
+            if (box.className.includes('right')) {
+                box.classList.remove('right');
+                box.classList.add('contrast-right');
+            } else if (box.className.includes('wrong')) {
+                box.classList.remove('wrong');
+                box.classList.add('contrast-wrong');
+            } else if (box.className.includes('empty')) {
+                box.classList.remove('empty');
+                box.classList.add('contrast-empty');
+            }
+        
+    })
+
 })
+
+
+
+
+// if (contrastToggle === false) {
+//     contrastToggle = true;
+//     e.target.blur();
+    
+
+//     console.log(contrastToggle);
+// } else if (contrastToggle === true) {
+//     contrastToggle = false;
+//     e.target.blur();
+//     console.log(contrastToggle);
+// } 
