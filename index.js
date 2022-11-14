@@ -6,7 +6,17 @@ const state = {
     grid: Array(6).fill().map(() => Array(5).fill('')),
     currentRow: 0,
     currentColumn: 0,
-}       
+}   
+
+function handleFirstTab(e) {
+    if (e.key === 'Tab') { // the "I am a keyboard user" key
+        console.log('TAB Pressed')
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+    }
+}
+
+window.addEventListener('keydown', handleFirstTab);
 
 function updateGrid() {
     for (let i = 0; i < state.grid.length; i++) {
@@ -151,13 +161,15 @@ startUp();
 // High contrast feature 
 const contrastButton = document.querySelector('#contrast');
 let contrastToggle = false;
-contrastButton.addEventListener("click", () => {
+contrastButton.addEventListener("click", (e) => {
 
     if (contrastToggle === false) {
         contrastToggle = true;
+        e.target.blur();
         console.log(contrastToggle);
     } else if (contrastToggle === true) {
         contrastToggle = false;
+        e.target.blur();
         console.log(contrastToggle);
     } 
 })
