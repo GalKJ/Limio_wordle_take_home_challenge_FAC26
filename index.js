@@ -165,18 +165,19 @@ contrastButton.addEventListener("click", (e) => {
 
     const boxes = document.querySelector(".grid").childNodes;
     console.log(boxes[0].className);
+    e.target.blur();
 
     boxes.forEach(box => {
         // console.log(box.classList);
-            if (box.className.includes('right')) {
-                box.classList.remove('right');
-                box.classList.add('contrast-right');
-            } else if (box.className.includes('wrong')) {
-                box.classList.remove('wrong');
-                box.classList.add('contrast-wrong');
-            } else if (box.className.includes('empty')) {
-                box.classList.remove('empty');
-                box.classList.add('contrast-empty');
+            if (box.className.includes('right' || 'contrast-right')) {
+                box.classList.toggle('right');
+                box.classList.toggle('contrast-right');
+            } else if (box.className.includes('wrong' || 'contrast-wrong')) {
+                box.classList.toggle('wrong');
+                box.classList.toggle('contrast-wrong');
+            } else if (box.className.includes('empty' || 'contrast-empty')) {
+                box.classList.toggle('empty');
+                box.classList.toggle('contrast-empty');
             }
         
     })
