@@ -8,15 +8,15 @@ const state = {
     currentColumn: 0,
 }   
 
-function handleFirstTab(e) {
-    if (e.key === 'Tab') { // the "I am a keyboard user" key
-        console.log('TAB Pressed')
-        document.body.classList.add('user-is-tabbing');
-        window.removeEventListener('keydown', handleFirstTab);
-    }
-}
+// function handleFirstTab(e) {
+//     if (e.key === 'Tab') { // the "I am a keyboard user" key
+//         console.log('TAB Pressed')
+//         document.body.classList.add('user-is-tabbing');
+//         window.removeEventListener('keydown', handleFirstTab);
+//     }
+// }
 
-window.addEventListener('keydown', handleFirstTab);
+// window.addEventListener('keydown', handleFirstTab);
 
 function updateGrid() {
     for (let i = 0; i < state.grid.length; i++) {
