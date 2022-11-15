@@ -1,7 +1,9 @@
 :root {
   --default: #121213;
   --empty: #3a3a3c;
+  --colour-blind-wrong: #85c0f9;
   --wrong: hotpink;
+  --colour-blind-right: #f5793a;
   --right: rebeccapurple;
 }
 
@@ -54,7 +56,7 @@ body {
 }
 
 .box.contrast-empty {
-  background: aqua;
+  background: var(--empty)
 }
 
 .box.wrong {
@@ -62,7 +64,7 @@ body {
 }
 
 .box.contrast-wrong {
-  background: firebrick;
+  background: #85c0f9;
 }
 
 .box.right {
@@ -70,7 +72,7 @@ body {
 }
 
 .box.contrast-right {
-  background: forestgreen;
+  background: ;
 }
 
 /* High contrast feature */
