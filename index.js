@@ -96,7 +96,7 @@ function revealWord(guess) {
         const box = document.querySelector(`#box${row}${i}`);
         const letter = box.textContent;
 
-        // if (contrastToggle === false) {
+        if (contrastButton.checked === false) {
         if (letter === state.secret[i]) {
             box.classList.add('right');
         } else if (state.secret.includes(letter)) {
@@ -104,18 +104,18 @@ function revealWord(guess) {
         } else {
             box.classList.add('empty');
         }
-    // } else if (contrastToggle === true) {
-    //     if (letter === state.secret[i]) {
-    //         box.classList.remove('right');
-    //         box.classList.add('contrast-right');
-    //     } else if (state.secret.includes(letter)) {
-    //         box.classList.remove('wrong');
-    //         box.classList.add('contrast-wrong');
-    //     } else {
-    //         box.classList.remove('empty');
-    //         box.classList.add('contrast-empty');
-    //     }
-    // }
+    } else if (contrastButton.checked === true) {
+        if (letter === state.secret[i]) {
+            box.classList.remove('right');
+            box.classList.add('contrast-right');
+        } else if (state.secret.includes(letter)) {
+            box.classList.remove('wrong');
+            box.classList.add('contrast-wrong');
+        } else {
+            box.classList.remove('empty');
+            box.classList.add('contrast-empty');
+        }
+    }
     }
     
     const isWinner = state.secret === guess;
