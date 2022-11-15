@@ -164,23 +164,36 @@ const contrastButton = document.querySelector('#contrast');
 contrastButton.addEventListener("click", (e) => {
 
     const boxes = document.querySelector(".grid").childNodes;
-    console.log(boxes[0].className);
+    console.log('check');
     e.target.blur();
 
     boxes.forEach(box => {
-        // console.log(box.classList);
-            if (box.className.includes('right' || 'contrast-right')) {
-                box.classList.toggle('right');
-                box.classList.toggle('contrast-right');
-            } else if (box.className.includes('wrong' || 'contrast-wrong')) {
-                box.classList.toggle('wrong');
-                box.classList.toggle('contrast-wrong');
-            } else if (box.className.includes('empty' || 'contrast-empty')) {
-                box.classList.toggle('empty');
-                box.classList.toggle('contrast-empty');
+        if (contrastButton.checked === true) {
+            if (box.className.includes('right')) {
+                box.classList.remove('right');
+                box.classList.add('contrast-right');
+            } else if (box.className.includes('wrong')) {
+                box.classList.remove('wrong');
+                box.classList.add('contrast-wrong');
+            } else if (box.className.includes('empty')) {
+                box.classList.remove('empty');
+                box.classList.add('contrast-empty');
             }
         
-    })
+    } else if (contrastButton.checked === false) {
+        if (box.className.includes('contrast-right')) {
+            box.classList.add('right');
+            box.classList.remove('contrast-right');
+        } else if (box.className.includes('contrast-wrong')) {
+            box.classList.add('wrong');
+            box.classList.remove('contrast-wrong');
+        } else if (box.className.includes('contrast-empty')) {
+            box.classList.add('empty');
+            box.classList.remove('contrast-empty');
+        }
+    
+}
+})
 
 })
 
