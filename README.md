@@ -33,14 +33,10 @@ To view the Wordle challenge please follow this link ADD LINK to the github page
 #### The challenge.
 
 ##### User Stories
-
--
-An example take home challenge based on wordle
-
-## Break up every part of the game into a separate user story.
-
-## Create an issue for every user story.
-
-## Decide which user story you are going to focus on for the take-home challenge.
-
-## Attempt to complete the selected user story. Do not attempt to complete the whole game.
+- As a user I want instructions so I understand how to play the game.
+- As a user I want the UI to be keyboard accessible so I can play without using a mouse.
+- As a user I want the UI to use semantic HTML so I can use my screen reader.
+- As a user I want the option of a high contrast mode so I can see the colour coded clues clearly.
+- As a user I want to set up an account so I can keep track of my game history.
+- As a user I want to link to my social media so I can post my results.
+- As a user I to enter a word so I can check the result.
