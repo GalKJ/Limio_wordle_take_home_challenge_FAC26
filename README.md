@@ -6,7 +6,7 @@
 
 ---
 
-## A take home challenge for [Limio](https://www.limio.com/) that breaks [Wordle](https://www.nytimes.com/games/wordle/index.html) into user stories and reproduces some of those user stories :puzzle:
+## A take home challenge for [Limio](https://www.limio.com/) that breaks [Wordle](https://www.nytimes.com/games/wordle/index.html) into user stories and reproduces some of those user stories. 
 
 ---
 
