@@ -18,17 +18,23 @@ Please feel free to clone the repo using this url https://github.com/d0g3bl2/Lim
 
 ### Deployment 
 
-To view the timer challenge please follow this link https://d0g3bl2.github.io/tpx_impact_challenge_fac26/ to the github pages.
+To view the Wordle challenge please follow this link ADD LINK to the github pages.
 
 ---
 
-### Part one - reproduce a poster.
+### The Limio Wordle take home challenge.
 
 #### Where to find the code.
 
-- Inside the [poster_challenge](https://github.com/d0g3bl2/tpx_impact_challenge_fac26/tree/main/poster_challenge) directory is `poster.html` which is linked to `poster.css` found in the `css` directory
+- Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26.git) is `index.html` which is linked to `style.css` found in the `css` directory and `index.js` found in the `src` directory.
+
+---
 
 #### The challenge.
+
+##### User Stories
+
+-
 An example take home challenge based on wordle
 
 ## Break up every part of the game into a separate user story.
