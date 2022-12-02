@@ -12,7 +12,7 @@
 
 ### Cloning 
 
-Please feel free to clone the repo using this url https://github.com/d0g3bl2/tpx_impact_challenge_fac26.git Simply open your terminal, run the command `git clone` followed by the url and type `code .` to open in your code editor of preference.
+Please feel free to clone the repo using this url https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26.git Simply open your terminal, run the command `git clone` followed by the url and type `code .` to open in your code editor of preference.
 
 ---
 
