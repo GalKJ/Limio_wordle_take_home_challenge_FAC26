@@ -1,5 +1,9 @@
+// import { dictionary } from "./word_list";
+
 // Mock take home challenge Wordle for FAC26
 const dictionary = ['tears', 'water', 'river', 'juice', 'tools', 'freak', 'cloth'];
+
+
 
 const state = {
     secret: dictionary[Math.floor(Math.random() * dictionary.length)],

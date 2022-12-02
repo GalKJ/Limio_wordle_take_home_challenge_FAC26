@@ -64,7 +64,7 @@ body {
 }
 
 .box.contrast-wrong {
-  background: #85c0f9;
+  background: var(--colour-blind-wrong);
 }
 
 .box.right {
@@ -72,7 +72,7 @@ body {
 }
 
 .box.contrast-right {
-  background: ;
+  background: var(--colour-blind-right);
 }
 
 /* High contrast feature */
@@ -94,9 +94,4 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-/* body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-  outline: none;
-} */
+
