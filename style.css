@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--default);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -17,14 +18,7 @@ h1 {
 
 }
 
-/* Menu */
-
-/* #form-wrapper{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-} */
-
+/* Menu toggle graphic*/
 #contrast-menu-checkbox {
   width: 60px;
   height: 60px;
@@ -56,22 +50,23 @@ span {
   top: 50px;
 }
 
-form {
-  /* justify-self: flex-start; */
-  /* position: absolute; */
-  left: 2%;
-  /* top: 20px; */
-  /* opacity: 0; */
+/* Menu */
+#menu-container {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 2%;
+  background: white;
 }
+
+
+
 
 /* Contrast */
 #options {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
   color: hotpink;
 }
 #contrast-label {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
   color: hotpink;
 }

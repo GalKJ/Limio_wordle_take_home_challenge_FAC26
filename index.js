@@ -1,6 +1,6 @@
 // import { dictionary } from "./word_list";
 
-// Mock take home challenge Wordle for FAC26
+// Global variables
     const dictionary = ['tears', 'water', 'river', 'juice', 'tools', 'freak', 'cloth'];
     const contrastMenuToggle = document.querySelector('#contrast-menu-checkbox');
 
@@ -171,20 +171,31 @@
                 box.classList.add('contrast-empty');
             }
         
-    } else if (contrastButton.checked === false) {
-        if (box.className.includes('contrast-right')) {
-            box.classList.add('right');
-            box.classList.remove('contrast-right');
-        } else if (box.className.includes('contrast-wrong')) {
-            box.classList.add('wrong');
-            box.classList.remove('contrast-wrong');
-        } else if (box.className.includes('contrast-empty')) {
-            box.classList.add('empty');
-            box.classList.remove('contrast-empty');
-        }
-    
+        } else if (contrastButton.checked === false) {
+            if (box.className.includes('contrast-right')) {
+                box.classList.add('right');
+                box.classList.remove('contrast-right');
+            } else if (box.className.includes('contrast-wrong')) {
+                box.classList.add('wrong');
+                box.classList.remove('contrast-wrong');
+            } else if (box.className.includes('contrast-empty')) {
+                box.classList.add('empty');
+                box.classList.remove('contrast-empty');
             }
-                })
+        
+                }
                     })
+                        })
+
+// Menu toggle 
+        switch (contrastMenuToggle.checked) {
+            case false:
+                console.log('false');
+                break;
+            case true:
+                console.log('true')
+            default:
+                break;
+        }
 
     startUp();
