@@ -5,40 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Wordle FAC26</title>
+    <title>Limio Wordle Challenge FAC26</title>
   </head>
   <body>
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" />
+    <header>
+      <h1>Limio Wordle Challenge</h1>
+    </header>
 
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- <div id="form-wrapper"> -->
+    <input id="contrast-menu-checkbox" type="checkbox" />
 
-        <ul id="menu">
-          <li>
-            <input type="checkbox" name="contrast" id="contrast" />
-            <label id="contrast-label" for="contrast"
-              >For colour blind users</label
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <span id="menu-span-0"></span>
+    <span id="menu-span-1"></span>
+    <span id="menu-span-2"></span>
 
-    <!-- <div>
-      <form action="">
-        <fieldset>
-          <legend id="options">User options</legend>
-          <input type="checkbox" name="contrast" id="contrast" />
-          <label id="contrast-label" for="contrast"
-            >For colour blind users</label
-          >
-        </fieldset>
-      </form>
-    </div> -->
-
+    <!-- </div> -->
+    <form action="">
+      <!-- <fieldset> -->
+      <legend id="options">User options</legend>
+      <input type="checkbox" name="contrast" id="contrast" />
+      <label id="contrast-label" for="contrast">For colour blind users</label>
+      <!-- </fieldset> -->
+    </form>
     <div id="game"></div>
 
     <script src="index.js" type="module"></script>

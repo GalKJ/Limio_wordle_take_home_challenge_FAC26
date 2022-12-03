@@ -11,6 +11,60 @@ body {
   background-color: var(--default);
 }
 
+h1 {
+  color: white;
+  text-align: center;
+
+}
+
+/* Menu */
+
+/* #form-wrapper{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+} */
+
+#contrast-menu-checkbox {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+span {
+  display: block;
+  /* position: relative; */
+  width: 50px;
+  height: 10px;
+  /* background: white; */
+}
+
+#menu-span-0 {
+  background: rgb(230, 226, 119);
+  /* top: 40px; */
+}
+
+#menu-span-1 {
+  background: rgb(171, 232, 149);
+  /* top: 20px; */
+}
+
+#menu-span-2 {
+  background: red;
+  /* left: 10px; */
+}
+
+form {
+  /* justify-self: flex-start; */
+  /* position: absolute; */
+  left: 2%;
+  /* top: 20px; */
+  /* opacity: 0; */
+}
+
 /* Contrast */
 #options {
   font-family: Arial, Helvetica, sans-serif;

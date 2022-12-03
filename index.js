@@ -168,7 +168,7 @@ const contrastButton = document.querySelector('#contrast');
 contrastButton.addEventListener("click", (e) => {
 
     const boxes = document.querySelector(".grid").childNodes;
-    console.log('check');
+    console.log(contrastButton);
     e.target.blur();
 
     boxes.forEach(box => {
