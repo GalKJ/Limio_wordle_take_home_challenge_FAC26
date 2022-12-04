@@ -50,31 +50,31 @@ span:hover {
   /* transform: rotate(45deg) translate(-2px, -1px); */
 }
 
-#menu-span-0 {
+.menu-span-0-unchecked {
   top: 18px;
   transform-origin: 0% 0%;
 }
 
-#menu-span-0:hover {
+.menu-span-0-checked {
   
   transform: rotate(47deg) translate(4px, -6px) scaleX(1.1);
   
 }
 
-#menu-span-1 {
+.menu-span-1-unchecked {
   top: 34px;
 }
 
-#menu-span-1:hover {
+.menu-span-1-checked {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menu-span-2 {
+.menu-span-2-unchecked {
   top: 50px;
 }
 
-#menu-span-2:hover {
+.menu-span-2-checked {
   transform: rotate(-45deg) translate(0, -2px) scaleX(1.1);
 }
 
