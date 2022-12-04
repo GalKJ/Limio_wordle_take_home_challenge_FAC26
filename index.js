@@ -156,6 +156,7 @@
     contrastButton.addEventListener("click", (e) => {
 
     const boxes = document.querySelector(".grid").childNodes;
+
     e.target.blur();
 
     boxes.forEach(box => {
@@ -188,14 +189,25 @@
                         })
 
 // Menu toggle 
-        switch (contrastMenuToggle.checked) {
-            case false:
-                console.log('false');
-                break;
-            case true:
-                console.log('true')
-            default:
-                break;
-        }
+
+        contrastMenuToggle.addEventListener('click', () => {
+
+            switch (contrastMenuToggle.checked) {
+                case false:
+                    console.log('false');
+                    break;
+                case true:
+                    console.log('true');
+                    break;
+                default:
+                    break;
+            }
+        
+        // if (contrastMenuToggle.checked === false) {
+        //     console.log('false');
+        // } else if (contrastMenuToggle.checked === true) {
+        //     console.log('true');
+        // }
+    })
 
     startUp();

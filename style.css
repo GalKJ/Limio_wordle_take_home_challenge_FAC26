@@ -25,8 +25,9 @@ h1 {
   position: absolute;
   top: 6px;
   left: 11px;
-  opacity: 0.1;
-
+  opacity: 0;
+  cursor: pointer;
+  /* z-index: 1; */
 }
 
 span {
@@ -36,18 +37,45 @@ span {
   height: 10px;
   left: 20px;
   background: var(--wrong);
+  border-radius: 3px;
+
+  transform-origin: 10px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+}
+
+span:hover {
+  opacity: 1;
+  /* transform: rotate(45deg) translate(-2px, -1px); */
 }
 
 #menu-span-0 {
   top: 18px;
+  transform-origin: 0% 0%;
+}
+
+#menu-span-0:hover {
+  
+  transform: rotate(47deg) translate(4px, -6px) scaleX(1.1);
+  
 }
 
 #menu-span-1 {
   top: 34px;
 }
 
+#menu-span-1:hover {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
 #menu-span-2 {
   top: 50px;
+}
+
+#menu-span-2:hover {
+  transform: rotate(-45deg) translate(0, -2px) scaleX(1.1);
 }
 
 /* Menu */
