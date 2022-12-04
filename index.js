@@ -192,12 +192,20 @@
 
         contrastMenuToggle.addEventListener('click', () => {
 
+            const span0 = document.querySelector(".menu-span-0-unchecked");
+            const span1 = document.querySelector(".menu-span-1-unchecked");
+            const span2 = document.querySelector(".menu-span-2-unchecked");
+
             switch (contrastMenuToggle.checked) {
                 case false:
-                    console.log('false');
+                    span0.classList.remove("menu-span-0-checked");
+                    span1.classList.remove("menu-span-1-checked");
+                    span2.classList.remove("menu-span-2-checked");
                     break;
                 case true:
-                    console.log('true');
+                    span0.classList.add("menu-span-0-checked");
+                    span1.classList.add("menu-span-1-checked");
+                    span2.classList.add("menu-span-2-checked");
                     break;
                 default:
                     break;
