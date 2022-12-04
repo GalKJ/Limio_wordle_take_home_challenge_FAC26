@@ -195,17 +195,20 @@
             const span0 = document.querySelector(".menu-span-0-unchecked");
             const span1 = document.querySelector(".menu-span-1-unchecked");
             const span2 = document.querySelector(".menu-span-2-unchecked");
+            const menuContainer = document.querySelector(".menu-container-closed");
 
             switch (contrastMenuToggle.checked) {
                 case false:
                     span0.classList.remove("menu-span-0-checked");
                     span1.classList.remove("menu-span-1-checked");
                     span2.classList.remove("menu-span-2-checked");
+                    menuContainer.classList.remove("menu-container-open");
                     break;
                 case true:
                     span0.classList.add("menu-span-0-checked");
                     span1.classList.add("menu-span-1-checked");
                     span2.classList.add("menu-span-2-checked");
+                    menuContainer.classList.add("menu-container-open");
                     break;
                 default:
                     break;
