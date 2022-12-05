@@ -1,7 +1,7 @@
-// import { dictionary } from "./word_list";
+import dictionaryArray from "./word_list.js";
 
 // Global variables
-    const dictionary = ['tears', 'water', 'river', 'juice', 'tools', 'freak', 'cloth'];
+    const dictionary = dictionaryArray;
     const contrastMenuToggle = document.querySelector('#contrast-menu-checkbox');
 
 
@@ -213,12 +213,6 @@
                 default:
                     break;
             }
-        
-        // if (contrastMenuToggle.checked === false) {
-        //     console.log('false');
-        // } else if (contrastMenuToggle.checked === true) {
-        //     console.log('true');
-        // }
     })
 
     startUp();
