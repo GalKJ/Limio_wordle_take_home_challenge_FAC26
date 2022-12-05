@@ -86,7 +86,6 @@ import dictionaryArray from "./word_list.js";
     }
 
     function revealWord(guess) {
-
         const row = state.currentRow;
         const userOutput = document.querySelector('#user-output');
 
