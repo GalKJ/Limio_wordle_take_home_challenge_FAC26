@@ -47,7 +47,6 @@ span {
 
 span:hover {
   opacity: 1;
-  /* transform: rotate(45deg) translate(-2px, -1px); */
 }
 
 .menu-span-0-unchecked {
