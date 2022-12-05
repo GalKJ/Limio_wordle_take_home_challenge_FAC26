@@ -11,6 +11,7 @@ import dictionaryArray from "./word_list.js";
         currentRow: 0,
         currentColumn: 0,
     }
+    
 
     function updateGrid() {
         for (let i = 0; i < state.grid.length; i++) {
@@ -87,6 +88,7 @@ import dictionaryArray from "./word_list.js";
     function revealWord(guess) {
 
         const row = state.currentRow;
+        const userOutput = document.querySelector('#user-output');
 
         for (let i = 0; i < 5; i++) {
             const box = document.querySelector(`#box${row}${i}`);
@@ -118,9 +120,9 @@ import dictionaryArray from "./word_list.js";
         const isGameOver = state.currentRow === 5;
 
         if (isWinner) {
-            alert('Congratulations User :) You win!');
+            userOutput.textContent = 'Congratulations User :) You win!';
         } else if (isGameOver) {
-            alert(`Better luck next time User:( The correct word was ${state.secret}.`)
+            userOutput.textContent = `Better luck next time User:( The correct word was ${state.secret}.`;
         }
     }
 
