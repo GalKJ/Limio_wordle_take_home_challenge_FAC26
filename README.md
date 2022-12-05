@@ -32,7 +32,7 @@ To view the Wordle challenge on Github pages please follow this link [Click me t
 
 #### The challenge.
 
-##### User Stories
+##### Firstly I broke the Wordle game in to [User Stories](https://www.visual-paradigm.com/guide/agile-software-development/what-is-user-story/), created new [github issues](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26/issues) for each and chose one to focus on building.
 
 - As a user I want instructions so I understand how to play the game.
 - As a user I want the UI to be keyboard accessible so I can play without using a mouse.
