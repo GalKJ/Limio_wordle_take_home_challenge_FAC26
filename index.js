@@ -31,7 +31,6 @@ import dictionaryArray from "./word_list.js";
 
         container.appendChild(box);
         
-        return box;
     }
 
     function drawGrid(container) {
@@ -51,6 +50,7 @@ import dictionaryArray from "./word_list.js";
     function registerKeyboardEvents() {
         document.body.addEventListener("keydown", (e) => {
             const key = e.key;
+            const userOutput = document.querySelector("#user-output");
             if (key === 'Enter') {
                 if (state.currentColumn === 5) {
                     const word = getCurrentWord();
@@ -59,12 +59,13 @@ import dictionaryArray from "./word_list.js";
                         state.currentRow++;
                         state.currentColumn = 0;
                     } else {
-                        alert('This is not a valid word User.');
+                        userOutput.textContent = 'This is not a valid word User.';
                     }
                 }
             }
             if (key === 'Backspace') {
                 removeLetter();
+                userOutput.textContent = '';
             }
             if (isLetter(key)) {
                 addLetter(key);
@@ -77,6 +78,7 @@ import dictionaryArray from "./word_list.js";
     function getCurrentWord() {
         return state.grid[state.currentRow].reduce((acc, current) => acc + current);
     }
+    
 
     function isWordValid(word) {
         return dictionary.includes(word);
@@ -138,6 +140,7 @@ import dictionaryArray from "./word_list.js";
         state.currentColumn--;
     }
 
+// Function runs drawGrid to render game grid, 
     function startUp() {
         const game = document.querySelector("#game");
         

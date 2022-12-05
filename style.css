@@ -99,11 +99,6 @@ span:hover {
   transform: translateX(0);
 }
 
-
-
-
-
-
 /* Contrast */
 #options {
   font-size: 1.4rem;
@@ -126,7 +121,6 @@ span:hover {
   display: grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: repeat(5, auto);
-  /* gap: 0.3rem; */
 }
 
 .box {
@@ -183,6 +177,14 @@ span:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: all 0.2s ease-in-out;
+}
+
+/* User Output */
+#user-output {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 

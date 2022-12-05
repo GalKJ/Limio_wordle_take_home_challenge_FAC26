@@ -6,17 +6,17 @@
 
 ---
 
-## A take home challenge for [Limio](https://www.limio.com/) that breaks [Wordle](https://www.nytimes.com/games/wordle/index.html) into user stories and reproduces some of those user stories. 
+## A take home challenge for [Limio](https://www.limio.com/) that breaks [Wordle](https://www.nytimes.com/games/wordle/index.html) into user stories and reproduces some of those user stories.
 
 ---
 
-### Cloning 
+### Cloning
 
 Please feel free to clone the repo using this url https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26.git Simply open your terminal, run the command `git clone` followed by the url and type `code .` to open in your code editor of preference.
 
 ---
 
-### Deployment 
+### Deployment
 
 To view the Wordle challenge please follow this link ADD LINK to the github pages.
 
@@ -33,6 +33,7 @@ To view the Wordle challenge please follow this link ADD LINK to the github page
 #### The challenge.
 
 ##### User Stories
+
 - As a user I want instructions so I understand how to play the game.
 - As a user I want the UI to be keyboard accessible so I can play without using a mouse.
 - As a user I want the UI to use semantic HTML so I can use my screen reader.
