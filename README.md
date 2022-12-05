@@ -26,7 +26,11 @@ To view the Wordle challenge on Github pages please follow this link [Click me t
 
 #### Where to find the code.
 
-Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26.git) is `index.html` which is linked to `style.css` found in the `css` directory and `index.js` found in the `src` directory.
+Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26.git) is `index.html` which is linked to `style.css` found in the `css` directory. 
+
+`index.js` and `word_list.js` are found in the `src` directory. 
+
+`index.js` is embeded at the end of the `index.html` body using the `<script>` tag and uses the static `import` declaration in order to access the dictionary array exported from `word_list.js`. 
 
 ---
 
