@@ -77,6 +77,9 @@ I now needed to add two seperate classes that I would add and remove when the us
 
 ![image](https://user-images.githubusercontent.com/99536044/206037853-611a3070-b92c-4a42-a65e-640b348bdfc3.png)
 
+Finally I added an `eventListener` to the checkbox that contained block scoped `const` variables and a `switch` statement with the expression `(contrastMenuToggle.checked)` that executed statements that added or removed classes depending on the `case` clauses `true` and `false`.
+
+![image](https://user-images.githubusercontent.com/99536044/206039528-bae22803-889e-4513-9565-507dcdf41bb1.png)
 
 
 
