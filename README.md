@@ -18,7 +18,7 @@ Please feel free to clone the repo using this url https://github.com/d0g3bl2/Lim
 
 ### Deployment
 
-To view the Wordle challenge on Github pages please follow this link [Click me to play!](https://d0g3bl2.github.io/Limio_wordle_take_home_challenge_FAC26/)
+To view the Wordle challenge on Github pages please follow this link [Click me to play!](https://d0g3bl2.github.io/Limio_wordle_take_home_challenge_FAC26/). You can check the console for the secret word!
 
 ---
 
