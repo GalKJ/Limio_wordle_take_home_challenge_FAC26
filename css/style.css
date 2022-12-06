@@ -50,9 +50,7 @@ span {
 }
 
 .menu-span-0-checked {
-  
   transform: rotate(47deg) translate(4px, -6px) scaleX(1.1);
-  
 }
 
 .menu-span-1-unchecked {
