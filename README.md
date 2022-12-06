@@ -73,5 +73,10 @@ I then styled and positioned the checkbox and the `span` elements in the top lef
 
 ![image](https://user-images.githubusercontent.com/99536044/206010131-a2c9ef56-1ff9-44ca-8aa2-0d9ce5ebc44f.png)
 
+I now needed to add two seperate classes that I would add and remove when the user clicked on the menu icon.
+
+![image](https://user-images.githubusercontent.com/99536044/206037853-611a3070-b92c-4a42-a65e-640b348bdfc3.png)
+
+
 
 
