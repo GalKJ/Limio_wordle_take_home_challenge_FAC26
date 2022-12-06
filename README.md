@@ -48,7 +48,7 @@ Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_ch
 
 ##### Contrast setting.
 
-I built a contrast feature that allows the user to switch to a high contrast mode. The `background` color of the `div` changes to alert the user that they have guessed the correct letter and it in the correct spot or if they have guessed the correct letter but it is in the incorrect place. By toggling the contrast mode feature the `background` of the `div` changes to a more suitable colour for colour blind users.
+I built a contrast feature that allows the user to switch to a high contrast mode. The `background` color of the box `div`'s into which the user inputs letters changes to alert the user that they have guessed the correct letter and it is in the correct spot or that they have guessed the correct letter but it is in the incorrect spot. When the user toggles the contrast mode feature the `background` of the box `div` changes to a more suitable colour for colour blind users.
 
 ![image](https://user-images.githubusercontent.com/99536044/205695784-db50d395-64f6-44f2-8a45-999dad8a877e.png)
 
@@ -59,5 +59,5 @@ In the code above ☝️ I used nested `if else` statements with conditionals th
    2. If the current boxes `classname.includes('wrong')`. 
    3. If the current boxes `classname.includes('empty')`. 
    
-If the conditionals `classname.includes` return true the codeblock is run removing the current class name and replacing it with it `contrast-right` for example.
+If the conditionals `classname.includes` return true the codeblock is run removing the current class name and replacing it with the appropriate high contrast `className`, `contrast-right` for example.
 
