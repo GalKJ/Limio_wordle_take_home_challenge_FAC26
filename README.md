@@ -34,9 +34,9 @@ Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_ch
 
 ---
 
-#### User stories.
+### User stories.
 
-##### Firstly I broke the Wordle game in to [User Stories](https://www.visual-paradigm.com/guide/agile-software-development/what-is-user-story/), created new [github issues](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26/issues) for each and chose one to focus on building.
+Firstly I broke the Wordle game in to [User Stories](https://www.visual-paradigm.com/guide/agile-software-development/what-is-user-story/), created new [github issues](https://github.com/d0g3bl2/Limio_wordle_take_home_challenge_FAC26/issues) for each and chose one to focus on building.
 
 - As a user I want instructions so I understand how to play the game.
 - As a user I want the UI to be keyboard accessible so I can play without using a mouse.
@@ -46,7 +46,9 @@ Inside the [root directory](https://github.com/d0g3bl2/Limio_wordle_take_home_ch
 - As a user I want to link to my social media so I can post my results.
 - As a user I to enter a word so I can check the result.
 
-##### Contrast setting.
+---
+
+### Contrast setting.
 
 I built a contrast feature that allows the user to switch to a high contrast mode. The `background` color of the box `div`'s into which the user inputs letters changes to alert the user that they have guessed the correct letter and it is in the correct spot or that they have guessed the correct letter but it is in the incorrect spot. When the user toggles the contrast mode feature the `background` of the box `div` changes to a more suitable colour for colour blind users.
 
@@ -63,7 +65,7 @@ If the conditionals `classname.includes` return true the codeblock is run removi
 
 ---
 
-##### Menu toggle UI feature.
+### Menu toggle UI feature.
 
 Once I had completed the contrast setting feature I needed somewhere the user could access this setting and decided to build a hamburger style menu that would slide the contrast feature on from off screen. In order to do so I created 3 `span` elements and a `input` with the type `chekbox` in my html document. 
 
