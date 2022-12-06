@@ -61,6 +61,8 @@ In the code above ☝️ I used nested `if else` statements with conditionals th
    
 If the conditionals `classname.includes` return true the codeblock is run removing the current class name and replacing it with the appropriate high contrast `className`, `contrast-right` for example.
 
+---
+
 ##### Menu toggle UI feature.
 
 Once I had completed the contrast setting feature I needed somewhere the user could access this setting and decided to build a hamburger style menu that would slide the contrast feature on from off screen. In order to do so I created 3 `span` elements and a `input` with the type `chekbox` in my html document. 
