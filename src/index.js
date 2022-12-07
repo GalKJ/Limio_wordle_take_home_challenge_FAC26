@@ -12,7 +12,7 @@ import dictionaryArray from "./word_list.js";
         currentColumn: 0,
     }
     
-// Function 
+// Function updates the game state object and UI in sync and saves the current state to memory.
     function updateGrid() {
         for (let i = 0; i < state.grid.length; i++) {
             for (let j = 0; j < state.grid[i].length; j++) {
@@ -165,6 +165,7 @@ import dictionaryArray from "./word_list.js";
 // High contrast feature
     const contrastButton = document.querySelector('#contrast');
 
+// Add event listener to listen for a click on the contrast button. Loop through the childNodes of the grid, checking firstly if the if statement conditional contrastButton.checked returns true or false and adding and removing classes if a class of 'right', 'wrong' or 'empty' already exists on the childNodes.  
     contrastButton.addEventListener("click", (e) => {
 
     const boxes = document.querySelector(".grid").childNodes;
@@ -202,6 +203,7 @@ import dictionaryArray from "./word_list.js";
 
 // Menu toggle 
 
+// add event listener to the input checkbox, declare block scoped variables for the span and menu container div elements and add and remove classes in the switch statement depending on whether the input is checked or not checked.  
         contrastMenuToggle.addEventListener('click', () => {
 
             const span0 = document.querySelector(".menu-span-0-unchecked");
