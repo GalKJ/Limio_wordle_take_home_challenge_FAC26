@@ -4,7 +4,7 @@ import dictionaryArray from "./word_list.js";
     const dictionary = dictionaryArray;
     const contrastMenuToggle = document.querySelector('#contrast-menu-checkbox');
 
-
+// const state is an object that will keep track of the current game state in memory and update the UI render accordingly   
     const state = {
         secret: dictionary[Math.floor(Math.random() * dictionary.length)],
         grid: Array(6).fill().map(() => Array(5).fill('')),
@@ -12,7 +12,7 @@ import dictionaryArray from "./word_list.js";
         currentColumn: 0,
     }
     
-
+// Function 
     function updateGrid() {
         for (let i = 0; i < state.grid.length; i++) {
             for (let j = 0; j < state.grid[i].length; j++) {
@@ -141,7 +141,7 @@ import dictionaryArray from "./word_list.js";
         state.currentColumn--;
     }
 
-// Function runs drawGrid to render game grid, 
+// Function runs drawGrid to render UI game board, registerKeyboardEvents to listen for the key down event  
     function startUp() {
         const game = document.querySelector("#game");
         
