@@ -24,6 +24,7 @@ import dictionaryArray from "./word_list.js";
         }
     }
 
+// Function creates a div dom element with the class name 'box'. The id of the box div is created using interpolation and named 'box' followed by the values of the row and column arguments passed from the outer and inner for loop indexes. The box div is then appended to the parent grid element. 
     function drawBox(container, row, column, letter = '') {
         const box = document.createElement('div');
         box.className = 'box';
@@ -34,6 +35,7 @@ import dictionaryArray from "./word_list.js";
         
     }
 
+// Function takes the game div as an argument, creates a div with the class name 'grid' and runs an inner and outer for loop calling the drawBox function for each iteration and passing the arguments 'grid' 'i' 'j' to draw box and finally appends the grid div to the game div as a child. 
     function drawGrid(container) {
         const grid = document.createElement('div');
         grid.className = 'grid';
@@ -48,6 +50,7 @@ import dictionaryArray from "./word_list.js";
         container.appendChild(grid);
     }
 
+// Function listens for the keydown event, saves the event keydown to 'key' variable and runs the appropriate if statement. 
     function registerKeyboardEvents() {
         document.body.addEventListener("keydown", (e) => {
             const key = e.key;
@@ -76,15 +79,17 @@ import dictionaryArray from "./word_list.js";
         });
     }
 
+// Function returns the values from the state object using the index of current row and using reduce returns the indexed values as a string. 
     function getCurrentWord() {
         return state.grid[state.currentRow].reduce((acc, current) => acc + current);
     }
     
-
+// Function checks that the dictionary array includes the string created by getCurrentWord.
     function isWordValid(word) {
         return dictionary.includes(word);
     }
 
+// Function runs a for loop to iterate over the box elements in the UI checking the text content against the word stored in memory at state.secret from index 0 through 4. It then checks if statement conditionals and adds and removes classes accordingly. The function scoped const variable isWinner has it's value set to the return value of currentWord and state.secret being equal while gameOver has a value set to the current row being equal to 5. These truthy values are then used as if statement conditionals.  
     function revealWord(guess) {
         const row = state.currentRow;
         const userOutput = document.querySelector('#user-output');
@@ -125,23 +130,26 @@ import dictionaryArray from "./word_list.js";
         }
     }
 
+    // Function checks if the expression is true. 
     function isLetter(key) {
         return key.length === 1 && key.match(/[a-z]/i);
     }
 
+// Function returns if user is typing at the end of a row. If this conditional returns false the current user input is saved in the state object at the index of current row and current column and the column in incremented by one.  
     function addLetter(letter) {
         if (state.currentColumn === 5) return;
         state.grid[state.currentRow][state.currentColumn] = letter;
         state.currentColumn++;
     }
 
+// Function returns when if statement conditional returns true. Otherwise the state.grid at index current row and current column minus one has it's value set to an empty string and the current state.currentColumn value is decremented by one.
     function removeLetter() {
         if (state.currentColumn === 0) return;
         state.grid[state.currentRow][state.currentColumn - 1] = '';
         state.currentColumn--;
     }
 
-// Function runs drawGrid to render UI game board, registerKeyboardEvents to listen for the key down event  
+// Function runs drawGrid to render UI game board, registerKeyboardEvents to listen for the key down event and run the relevant if statement. 
     function startUp() {
         const game = document.querySelector("#game");
         
@@ -154,7 +162,7 @@ import dictionaryArray from "./word_list.js";
 
 
 
-// High contrast feature 
+// High contrast feature
     const contrastButton = document.querySelector('#contrast');
 
     contrastButton.addEventListener("click", (e) => {
